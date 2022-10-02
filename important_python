@@ -28,3 +28,22 @@ employee_data = pandas.read_csv("data.csv")
 
 # printing the data as output
 print(data.iloc[1:3])
+
+
+4. JSONSerializer
+   def __init__(self, schema_str, schema_registry_client, to_dict=None, conf=None)
+# object() is shorthand for object.__call__()Definition and Usage
+  def __call__(self, obj, ctx):
+        """
+        Serializes an object to JSON, prepending it with Confluent Schema Registry
+        framing.
+        Args:
+            obj (object): The object instance to serialize.
+            ctx (SerializationContext): Metadata relevant to the serialization
+                operation.
+        Raises:
+            SerializerError if any error occurs serializing obj.
+        Returns:
+            bytes: None if obj is None, else a byte array containing the JSON
+            serialized data with Confluent Schema Registry framing.
+        """
