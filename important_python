@@ -12,3 +12,19 @@ Parameter	Description
 iterator1, iterator2, iterator3 ...	Iterator objects that will be joined together
 
 
+3. iloc()
+The iloc() function in python is defined in the Pandas module that helps us to select a specific row or column from the data set.
+Using the iloc method in python, we can easily retrieve any particular value from a row or column by using index values.
+The syntax of iloc function in python is very simple: pandas.dataset.iloc[row, column]
+The iloc function in python takes two optional parameters i.e. row number(s) and column number(s). We can only pass integer type values as parameter(s) in the iloc function in python.
+Using the parameters provided, the iloc function in python returns a data set or series.
+If we specify only row value, then the iloc function returns a Pandas Series. If we specify row value and column value, then the iloc function returns all the content of the specified cell. If we specify a list of values, the python iloc function returns a Pandas DataFrame.
+
+Example:
+import pandas
+
+# reading the data from the data.csv file
+employee_data = pandas.read_csv("data.csv")
+
+# printing the data as output
+print(data.iloc[1:3])
