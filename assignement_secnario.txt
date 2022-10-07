@@ -1,0 +1,11 @@
+6. Write kafka consumer code and create two copies of same consumer code and save it with different names (kafka_consumer_1.py & kafka_consumer_2.py), 
+   again make sure lates schema version and schema_str is not hardcoded in the consumer code, read it automatically from the schema registry to desrialize the data. 
+   Now test two scenarios with your consumer code:
+    a.) Use "group.id" property in consumer config for both consumers and mention different group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
+        apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
+        consumed and printed on the terminal
+    Ans - 49928,24890
+    b.) Use "group.id" property in consumer config for both consumers and mention same group_ids in kafka_consumer_1.py & kafka_consumer_2.py,
+        apply "earliest" offset property in both consumers and run these two consumers from two different terminals. Calculate how many records each consumer
+        consumed and printed on the terminal
+   Ans-74818 for both consumers
